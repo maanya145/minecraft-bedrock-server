@@ -39,7 +39,9 @@ const bucketName = `Minecraft-bedrock-backup.${serverProps['level-name']}`.toLow
 
 if (backupConfig["use-aws-s3-backup"]) {
   s3 = new AWS.S3({
-    apiVersion: '2006-03-01'
+    apiVersion: '2006-03-01',
+    endpoint: new AWS.Endpoint('http://s3.tebi.io'),
+    s3ForcePathStyle: true
   });
 } else {
   console.log(`!!!!!!!!!!\nconfig["backup"]["use-aws-s3-backup"] set to false - if you want to use AWS S3 backups, set this to true and see https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-shared.html for instruction on how to define your AWS credentials\n!!!!!!!!!!\n`);
