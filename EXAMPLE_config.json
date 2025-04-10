@@ -1,15 +1,9 @@
-// Rename this file to 'config.json' and delete this comment before starting
-//
-// See bedrock_server_how_to.html for more detailed information about what
-// each of the fields in "server-properties" do
-//
-// Delete all the lines not below this one
 
 {
-  "accept-official-minecraft-server-eula": false,
-  "minecraft-server-version": "1.20.41.02",
+  "accept-official-minecraft-server-eula": true,
+  "minecraft-server-version": "1.21.72.01",
   "server-properties": {
-    "server-name": "Dedicated Node S3 Server",
+    "server-name": "SMP",
     "gamemode": "survival",
     "difficulty": "normal",
     "allow-cheats": false,
@@ -41,7 +35,7 @@
   },
   "backup": {
     "backup-frequency-minutes": 20,
-    "use-aws-s3-backup": false,
+    "use-aws-s3-backup": true,
     "num-backups-to-keep-for-type": {
       "local": {
         "SCHEDULED": 20,
